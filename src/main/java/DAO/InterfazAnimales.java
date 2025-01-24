@@ -7,6 +7,7 @@ public interface InterfazAnimales {
     List<Animales> findAll();
     Animales findById(int id);
     List<Animales> findByName(String name);
+    List<Animales> findByEspecie(String especie);
     Animales create(Animales animales);
     Animales update(Animales animales);
     boolean delete(int id);

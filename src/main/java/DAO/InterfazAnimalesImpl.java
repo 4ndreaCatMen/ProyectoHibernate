@@ -39,6 +39,17 @@ public class InterfazAnimalesImpl implements InterfazAnimales {
     }
 
     @Override
+    public List<Animales> findByEspecie(String especie) {
+        Session session = obtenerSesion();
+        List<Animales> animales = session.createQuery("FROM Animales WHERE especie = :especie", Animales.class)
+                .setParameter("especie", especie)
+                .list();
+        session.close();
+        return animales;
+    }
+
+
+    @Override
     public Animales create(Animales animal) {
         Session session = obtenerSesion();
         Transaction tx = session.beginTransaction();
