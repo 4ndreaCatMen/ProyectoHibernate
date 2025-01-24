@@ -52,10 +52,23 @@ public class Animales implements Serializable {
     }
 
     // Getters y Setters
+
+
     public Integer getId() {
-        return id; }
+        return id;
+    }
+
     public void setId(Integer id) {
-        this.id = id; }
+        this.id = id;
+    }
+
+    public Usuarios getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuarios usuario) {
+        this.usuario = usuario;
+    }
 
     public String getNombre() {
         return nombre; }

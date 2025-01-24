@@ -8,7 +8,6 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
         <!-- Configuración para mostrar y formatear SQL en consola -->
-        <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
 
         <!-- Control sobre la creación de tablas -->
