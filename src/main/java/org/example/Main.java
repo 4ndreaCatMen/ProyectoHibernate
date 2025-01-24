@@ -53,7 +53,7 @@ public class Main {
                     System.out.println("Saliendo...");
                     break;
                 default:
-                    System.out.println("Opción no válida. Intente de nuevo.");
+                    System.out.println("Error. Inténtelo de nuevo.");
             }
         } while (opcion != 7);
 
@@ -61,12 +61,12 @@ public class Main {
     }
 
     private static void agregarUsuario(Scanner scanner, InterfazUsuariosImpl usuariosDAO) {
-        System.out.print("Ingrese nombre del usuario: ");
+        System.out.print("Nombre del usuario: ");
         String nombre = scanner.nextLine();
-        System.out.print("Ingrese edad del usuario: ");
+        System.out.print("Edad: ");
         int edad = scanner.nextInt();
         scanner.nextLine();
-        System.out.print("Ingrese ciudad del usuario: ");
+        System.out.print("Ciudad: ");
         String ciudad = scanner.nextLine();
 
         Usuarios usuario = new Usuarios();
@@ -79,7 +79,7 @@ public class Main {
     }
 
     private static void buscarUsuarioPorId(Scanner scanner, InterfazUsuariosImpl usuariosDAO) {
-        System.out.print("Ingrese el ID del usuario: ");
+        System.out.print("ID del usuario: ");
         int id = scanner.nextInt();
         Usuarios usuario = usuariosDAO.findById(id);
         if (usuario != null) {
@@ -101,18 +101,18 @@ public class Main {
     }
 
     private static void agregarAnimal(Scanner scanner, InterfazAnimalesImpl animalesDAO, InterfazUsuariosImpl usuariosDAO) {
-        System.out.print("Ingrese el nombre del animal: ");
+        System.out.print("Nombre del animal: ");
         String nombre = scanner.nextLine();
-        System.out.print("Ingrese la especie del animal: ");
+        System.out.print("Especie del animal: ");
         String especie = scanner.nextLine();
-        System.out.print("Ingrese la edad del animal: ");
+        System.out.print("Edad aprox. del animal: ");
         int edad = scanner.nextInt();
         scanner.nextLine();
-        System.out.print("Ingrese la descripción: ");
+        System.out.print("Descripción: ");
         String descripcion = scanner.nextLine();
-        System.out.print("Ingrese el estado del animal: ");
+        System.out.print("Estado del animal: ");
         String estado = scanner.nextLine();
-        System.out.print("Ingrese el ID del usuario (familia de acogida): ");
+        System.out.print("ID del usuario (familia de acogida): ");
         int usuarioId = scanner.nextInt();
 
         Usuarios usuario = usuariosDAO.findById(usuarioId);
@@ -133,7 +133,7 @@ public class Main {
     }
 
     private static void buscarAnimalPorId(Scanner scanner, InterfazAnimalesImpl animalesDAO) {
-        System.out.print("Ingrese el ID del animal: ");
+        System.out.print("ID del animal: ");
         int id = scanner.nextInt();
         Animales animal = animalesDAO.findById(id);
         if (animal != null) {
