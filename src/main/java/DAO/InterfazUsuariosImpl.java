@@ -58,18 +58,4 @@ public class InterfazUsuariosImpl implements InterfazUsuarios {
         return usuario;
     }
 
-    @Override
-    public boolean delete(int id) {
-        Session session = obtenerSesion();
-        Transaction tx = session.beginTransaction();
-        Usuarios usuario = session.get(Usuarios.class, id);
-        if (usuario != null) {
-            session.delete(usuario);
-            tx.commit();
-            session.close();
-            return true;
-        }
-        session.close();
-        return false;
-    }
 }

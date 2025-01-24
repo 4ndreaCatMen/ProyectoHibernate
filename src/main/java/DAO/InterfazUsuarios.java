@@ -9,5 +9,5 @@ public interface InterfazUsuarios {
     List<Usuarios> findByName(String name);
     Usuarios create(Usuarios usuario);
     Usuarios update(Usuarios usuario);
-    boolean delete(int id);
+
 }

@@ -10,5 +10,4 @@ public interface InterfazAnimales {
     List<Animales> findByEspecie(String especie);
     Animales create(Animales animales);
     Animales update(Animales animales);
-    boolean delete(int id);
 }
